@@ -6,6 +6,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
+import entities.Product;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -67,6 +69,7 @@ public class Main {
 		}
 		
 		operacoesDeConjunto();
+		treeHashCompare();
 	}
 	public static void operacoesDeConjunto() {
 		Set<Integer> a = new TreeSet<>(Arrays.asList(0,2,4,5,6,8,10));
@@ -84,4 +87,15 @@ public class Main {
 		e.removeAll(b);
 		System.out.println(e);
 	}
+	
+	
+	public static void treeHashCompare() {
+		Set<Product> set = new TreeSet<>();
+		set.add(new Product("TV", 900.0));
+		set.add(new Product("Notebook", 1200.0));
+		set.add(new Product("Tablet", 400.0));
+		for (Product p : set) {
+		System.out.println(p);
+		}
+		}
 }
